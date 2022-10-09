@@ -1,6 +1,6 @@
 const toggle = document.querySelector(".toggle");
 const menu = document.querySelector(".menu");
- toggle.style.background = 'red'
+ toggle.style.background = 'rgb(255, 140, 0)'
 /* Toggle mobile menu */
 function toggleMenu() {
     if (menu.classList.contains("active")) {

@@ -31,13 +31,13 @@ a {
     list-style-type: none;
 }
 .logo {
-    font-size: 25px;
+    font-size: 1.9rem;
     padding: 5px 15px 7.5px 120px;
     font-weight: bold;
     text-transform: capitalize;
 }
 .item {
-    padding: 10px;
+    padding: 15px;
     color: gray;
     font-size: 15px;
 
@@ -84,6 +84,7 @@ a {
     display: none;
     text-transform: capitalize;
     font-weight: 500;
+
 }
 .active .item {
     display: block;
@@ -98,6 +99,8 @@ a {
 }
 .submenu-active .submenu {
    display: block;
+   z-index: 1;
+
    
 }
 .has-submenu i {
@@ -111,15 +114,18 @@ a {
     content: "\f078";
     color: white;
     padding-left: 5px;
+    
 }
 .subitem a {
-    padding: 10px 15px;
-    
+  background: #fff;
+ 
 }
 .submenu-active {
     background-color: rgb(255, 140, 0);
     border-radius: 3px;
+
 }
+
 
 .nav_line_container {
     display: grid;
@@ -150,6 +156,7 @@ a {
     width: 40px;
     height: 40px;
     border-radius: 50px;
+    border: 2px solid rgb(255, 140, 0);
 
 }
 
@@ -193,7 +200,7 @@ a {
 
 
   .container-1 {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 20px 140px; 
   
   }
@@ -216,7 +223,6 @@ a {
   
   .featured-wrapper .featured-list {
     display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
 
   }
   
@@ -255,6 +261,9 @@ a {
     display: grid;
     
   }
+
+  
+ 
   
   .thumb-list img,
   .thumb-list .outer {
@@ -313,17 +322,19 @@ a {
   border: 3px solid orange;
 }
 
+
+
 .sneaker-container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  margin: 35%;
+  margin: 38%;
  }
 
 .sneaker-content p:nth-child(1) {
   color: orange;
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: 600;
   padding: 0px 0px 20px;
 }
@@ -331,12 +342,12 @@ a {
 .sneaker-content h1 {
   text-transform: capitalize;
   font-weight: 600;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
 }
 
 .sneaker-content p {
   color: grey;
-  font-size: 13px;
+  font-size: 16px;
   padding: 20px 0px 20px;
 
 }
@@ -356,13 +367,14 @@ a {
 }
 
 .number-content-1 span {
-  font-size: 12px;
-  background: #ffa60032;
+  font-size: 0.8rem;
+  background: #ff950049;
   border-radius: 5px;
   text-align: center;
   padding: 1.5px ;
   margin-left: 10px;
-  color: #ffa500;
+  color: #ffa200;
+  font-weight: bold;
 }
 
 .two-fifty {
@@ -380,7 +392,7 @@ a {
   display: flex;
   background: #80808011;
   width: 150px;
-  padding: 13px;
+  height: 8vh;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -412,7 +424,7 @@ a {
   display: flex;
   background: #ff7300;
   width: 200px;
-  padding: 13px;
+  height: 8vh;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -564,7 +576,7 @@ a {
     margin-left: 20px;
   }
 
-}
+ 
 
 @media all and (max-width: 500px) {
 
@@ -582,26 +594,22 @@ a {
         font-weight: bolder;
         text-transform: capitalize;
     }
-    .toggle {
-        position: relative;
-    }
+
     
     .nav-sec-container {
-        position: absolute;
-        margin: 20px 0px;
-        right: 10px;
+        right: 0%;
     }
 
 
     .wheel {
         width: 25px;
         height: 25px;
-        margin-right: 30px;
+        margin: 5px 20px;
     }
     
     .passport {
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         border-radius: 50px;
     
     }
@@ -612,7 +620,7 @@ a {
     }
 
     .container-1 {
-      max-width: 0px;
+      /* max-width: 500px; */
       margin: 0%; 
     }
 
@@ -628,43 +636,40 @@ a {
 
       
   .featured-list img {
-    border-radius: 0px;
-    width: 485px;
-    height: 50vh;
+  border-radius: 0px;
+  height: 50vh;
    }
 
-   .featured-wrapper .arrows label::before,
-   .featured-wrapper .arrows label::after {
-     position: absolute;
-     top: 50%;
-     transform: translateY(-50%);
-     width: 40px;
-     height: 40px;
-     border-radius: 50%;
-     color: var(--black);
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: 24px 24px;
-     background-color: var(--white);
-     opacity: 0.5;
-     transition: opacity 0.25s;
-   }
-   
-   
-   .featured-wrapper .arrows label::before {
-     left: 10px;
-   }
-   
-   .featured-wrapper .arrows label::after {
-    right: 80px;
-    }
    
    .thumb-list {
     display: none;
   
   }
 
-
+  .featured-wrapper .arrows label::before,
+  .featured-wrapper .arrows label::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--black);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-color: var(--white);
+    opacity: 0.5;
+    transition: opacity 0.25s;
+  }
+  
+  .featured-wrapper .arrows label::before {
+    left: 10px;
+  }
+  
+  .featured-wrapper .arrows label::after {
+    right: 10px;
+  }
 
 
 
@@ -687,13 +692,13 @@ a {
     text-transform: capitalize;
     font-weight: 800;
     font-size: 2rem;
-    /* padding:  2rem; */
+    margin: 1.5rem 0rem 1.5rem;
   }
   
   .sneaker-content p {
     color: grey;
     font-size: 13px;
-    padding: 1rem 10rem 1rem 0rem;
+    padding: 2rem 20rem 2rem 0rem;
   
   }
   
@@ -720,7 +725,7 @@ a {
   .two-fifty {
     color: #808080;
     font-size: 15px;
-    padding: 10px 10rem 10px;
+    padding: 10px 16rem 10px;
     text-decoration: line-through;
   }
   
@@ -733,7 +738,6 @@ a {
   .input-content  {
     display: flex;
     width: 200px;
-    padding: 0px;
     height: 8vh;
     align-items: center;
     justify-content: center;
@@ -764,7 +768,6 @@ a {
     background: #ff7300;
     width: 230px;
     height: 8vh;
-    padding: 0px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -784,9 +787,7 @@ a {
 
 
       .container-1 {
-        max-width: 400px;
-        margin: 0%; 
-      
+        max-width: 100px;      
       }
   
   
@@ -801,16 +802,13 @@ a {
         
   
         
-    .featured-list img {
-      width: 450px;
-      height: 50vh;
-     }
 
    
-     .featured-wrapper .arrows label::after {
-      right: 110px;
-      }
-
+     .sneaker-content h1 {
+      text-transform: capitalize;
+      font-weight: 800;
+      font-size: 1.6rem;
+    }
 
       .input-content  {
         display: flex;
@@ -820,6 +818,10 @@ a {
      
         border-radius: 5px;
       }
+
+
+
+      
       
       .input-content button {
         border: none;
@@ -853,14 +855,8 @@ a {
     overflow-x: hidden;
   }
 
-  .featured-wrapper .arrows label::after {
-    right: 170px;
-    }
 
-  .featured-list img {
-    width: 500px;
-    height: 50vh;
-   }
+ 
 
 
   .sneaker-content h1 {
@@ -874,11 +870,9 @@ a {
   .sneaker-content p {
     color: grey;
     font-size: 16px;
-    position: relative;
-    left: 0;  
-  }
-  
+    padding: 1rem 25rem 0rem 0rem ;
 
+  }
 
   .button-container {
     display: grid;
@@ -888,7 +882,7 @@ a {
    }
    .input-content  {
      width: 300px;
-     height: 6vh;
+     height: 8vh;
      padding: 0px;
     
    }
@@ -899,7 +893,7 @@ a {
  
    .button-content {
      width: 300px;
-     height: 6vh;
+     height: 8vh;
      padding: 0px;
      margin: 15px 0px;    
    }
@@ -912,15 +906,8 @@ a {
   }
 
 
-    .featured-wrapper .arrows label::after {
-    right: 45px;
-    }
 
-  .featured-list img {
-    border-radius: 0px;
-    width: 450px;
-    height: 50vh;
-   }
+
 
 
   .two-fifty {
@@ -940,14 +927,14 @@ a {
   .sneaker-content p {
     color: grey;
     font-size: 16px;
-    padding: 1rem 10rem 1rem 0rem;
+    padding: 1rem 8rem 1rem 0rem;
   
   }
   
 
 
   .button-container {
-    margin-left: 22px;
+    margin-left: 15px;
    }
    .input-content  {
      width: 250px;
@@ -966,4 +953,4 @@ a {
     
    }
 
-  }}
+  }}}
